@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sinsajo.model.Client;
 import com.sinsajo.service.ClientServiceI;
-import com.sinsajo.service.impl.ClientServiceImpl;
 
 @RestController
 public class ClientController {
