@@ -30,7 +30,7 @@ public class Client {
 	@Column(name = "DNI")
 	private String dni;
 	
-	public Client(int id, String firstName, String lastName, int age, String dni) {
+	public Client(final int id, final String firstName, final String lastName, final int age, final String dni) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
