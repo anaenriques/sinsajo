@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sinsajo.model.Client;
@@ -19,7 +18,6 @@ public class ClientController {
 	private ClientServiceI clientService;
 	
 	@GetMapping("/listAllClients")
-	@ResponseBody
 	public List<Client> listAllClients() {
 		return clientService.listAllClients();
 	}

@@ -6,15 +6,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "CLIENT")
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Client {
 	
 	@Id
@@ -29,15 +34,5 @@ public class Client {
 	private int age;
 	@Column(name = "DNI")
 	private String dni;
-	
-	public Client(final int id, final String firstName, final String lastName, final int age, final String dni) {
-		super();
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.age = age;
-		this.dni = dni;
-	}
-	
 
 }
