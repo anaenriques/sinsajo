@@ -34,11 +34,11 @@ public class ClientController {
 		return clientService.findById(id);
 	}
 	
-//	@GetMapping("/addClient")
-//	public Client addClient(@RequestParam ) {
-//		return clientService.insertClient(null);
-//	}
-//	
+	@GetMapping("/addClient")
+	public Client addClient(@RequestParam Client client) {
+		return clientService.insertClient(null);
+	}
+	
 //	@GetMapping("/updateClient")
 //	public Client updateClient() {
 //		return ;
