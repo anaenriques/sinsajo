@@ -43,7 +43,8 @@ public class ClientController {
 	
 	@PostMapping("/updateClient/{id}")
 	public Client updateClient(@RequestBody Client client, @PathVariable int id) {
-		return clientService.updateClient(client,id);
+		client.setId(id);
+		return clientService.updateClient(client);
 	}
 	
 	@GetMapping("/deleteClient/{id}")

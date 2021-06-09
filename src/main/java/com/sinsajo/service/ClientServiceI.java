@@ -9,7 +9,7 @@ public interface ClientServiceI {
 	List<Client> listAllClients();
 	Client insertClient(final Client client);
 	void deleteClient(final int id);
-	Client updateClient(final Client client, int id);
+	Client updateClient(final Client client);
 	Client findById(final int id);
 
 }
