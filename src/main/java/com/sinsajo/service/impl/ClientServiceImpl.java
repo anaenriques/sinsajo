@@ -34,9 +34,9 @@ public class ClientServiceImpl implements ClientServiceI {
 	}
 
 	@Override
-	public int updateClient(Client client) {
-		// TODO Auto-generated method stub
-		return 0;
+	public Client updateClient(Client client, int id) {
+		client.setId(id);
+		return clientRepository.save(client);
 	}
 
 	@Override

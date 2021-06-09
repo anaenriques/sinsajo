@@ -42,5 +42,6 @@ public class Client implements Serializable {
 	private int age;
 	@Column(name = "DNI")
 	private String dni;
+	
 
 }

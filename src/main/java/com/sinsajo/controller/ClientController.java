@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,15 +36,15 @@ public class ClientController {
 		return clientService.findById(id);
 	}
 	
-	@GetMapping("/addClient")
-	public Client addClient(@RequestParam Client client) {
-		return clientService.insertClient(null);
+	@PostMapping("/addClient")
+	public Client addClient(@RequestBody Client client) {
+		return clientService.insertClient(client);
 	}
 	
-//	@GetMapping("/updateClient")
-//	public Client updateClient() {
-//		return ;
-//	}
+	@PostMapping("/updateClient/{id}")
+	public Client updateClient(@RequestBody Client client, @PathVariable int id) {
+		return clientService.updateClient(client,id);
+	}
 	
 	@GetMapping("/deleteClient/{id}")
 	public String deleteClient(@PathVariable int id) {
