@@ -48,8 +48,10 @@ public class Client implements Serializable {
 	private String lastName;
 	@Column(name = "AGE")
 	private int age;
-	@Column(name = "DNI")
+	@Column(name = "DNI", unique=true)
 	private String dni;
+	@Column(name="EMAIL", unique=true)
+	private String email;
 	
 
 }

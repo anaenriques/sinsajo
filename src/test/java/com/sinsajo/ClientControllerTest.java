@@ -39,14 +39,14 @@ class ClientControllerTest {
 	@Test
 	@Order(3)
 	void addClient() {
-		Client client = new Client(4, "", "", 22, "");
+		Client client = new Client(4, "", "", 22, "", "");
 		assertEquals(4, clientService.insertClient(client).getId());
 	}
 	
 	@Test
 	@Order(4)
 	void updateClient() {
-		Client client = new Client(4, "", "", 33, "");
+		Client client = new Client(4, "", "", 33, "", "");
 		assertEquals(33, clientService.updateClient(client).getAge());
 	}
 	
