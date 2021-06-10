@@ -1,3 +1,7 @@
+/*
+ * @author sinsajoTeam
+ * @version 1.0
+ */
 package com.sinsajo.service.impl;
 
 import java.util.List;
@@ -18,26 +22,54 @@ public class ClientServiceImpl implements ClientServiceI {
 	@Qualifier("ClientRepository")
 	private ClientRepository clientRepository;
 
+	/**
+	 * List all clients.
+	 *
+	 * @return List of clients
+	 */
 	@Override
 	public List<Client> listAllClients() {
 		return clientRepository.findAll();
 	}
 
+	/**
+	 * Insert client.
+	 *
+	 * @param client: new client
+	 * @return inserted Client
+	 */
 	@Override
 	public Client insertClient(Client client) {
 		return clientRepository.save(client);
 	}
 
+	/**
+	 * Delete client.
+	 *
+	 * @param id: Client Id
+	 */
 	@Override
 	public void deleteClient(int id) {
 		clientRepository.deleteById(id);
 	}
 
+	/**
+	 * Update client.
+	 *
+	 * @param client the client
+	 * @return updated client
+	 */
 	@Override
 	public Client updateClient(Client client) {
 		return clientRepository.save(client);
 	}
 
+	/**
+	 * Find by id.
+	 *
+	 * @param id: client id
+	 * @return found client by id
+	 */
 	@Override
 	public Client findById(int id) {
 		return clientRepository.findById(id).orElse(null);
