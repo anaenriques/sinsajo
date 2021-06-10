@@ -1,3 +1,8 @@
+/*
+ * Client's Entity
+ * @author: sinsajoTeam
+ * @version: v1.0
+ */
 package com.sinsajo.model;
 
 import java.io.Serializable;
@@ -18,6 +23,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
+/**
+ * Class Client.
+ */
 @Entity
 @Table(name = "CLIENT")
 @Getter
