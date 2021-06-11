@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfiguration {
 
-	@Bean(initMethod = "start", destroyMethod = "stop")
+	@Bean
 	public Server inMemoryH2DatabaseServer() throws Exception {
 		return Server.createTcpServer("-tcp", "-tcpAllowOthers", "-tcpPort", "9090");
 	}
